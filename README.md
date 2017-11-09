@@ -2,7 +2,7 @@ DAO
 swagger
 
 houston-apps bank
-his is Online Banking software. Employees can create a new account to the customer.
+this is Online Banking software. Employees can create a new account to the customer.
 If the customer withdraws the money from the bank, then the particular amount will be deducted from his account. If the customer puts the money into the bank, then the amount will be added to the customer’s account.
 
 Here the employee can see all the details of the particular customer in the software.
