@@ -16,7 +16,7 @@ Base = declarative_base()
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    firstname = Column(String(50), nullable=False, unique=True)
+    firstname = Column(String(50), nullable=False)
 
     def __init__(self, name=None):
         self.firsname = name
@@ -24,28 +24,28 @@ class User(Base):
     def __repr__(self):
         return '<User %r>' % self.firsname
 
-#
-# class Account(Base):
-#     __tablename__ = 'accounts'
-#     id = Column(Integer, primary_key=True)
-#     type = Column(Boolean)
-#
-#     def amount(self):
-#         return None
-#
-#
-# class Transaction(Base):
-#     __tablename__ = 'transactions'
-#     id = Column(Integer, primary_key=True)
-#     amount = Column(Float)
-#
-#     def __init__(self, amount, from_account=None, to_account=None, currency=None):
-#         self.amount = amount
-#
-#
-# class Bank(Base):
-#     __tablename__ = 'banks'
-#     id = Column(Integer, primary_key=True)
+
+class Account(Base):
+    __tablename__ = 'accounts'
+    id = Column(Integer, primary_key=True)
+    type = Column(Boolean)
+
+    def amount(self):
+        return None
+
+
+class Transaction(Base):
+    __tablename__ = 'transactions'
+    id = Column(Integer, primary_key=True)
+    amount = Column(Float)
+
+    def __init__(self, amount, from_account=None, to_account=None, currency=None):
+        self.amount = amount
+
+
+class Bank(Base):
+    __tablename__ = 'banks'
+    id = Column(Integer, primary_key=True)
 
 
 Base.metadata.create_all(engine)
